@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/small\ background.jpg);
+     background-size: cover;
+   
+    }
+@media only screen and (min-width: 400px) {
+    body {
+      background-image: url(../images/technology-background-1632715.jpg);
+    }
+}
+
+.cardStyle {
+    width: 30rem; 
+    margin: 0 auto; 
+    padding: 30px 40px;
+    border-radius: 30px;
+}
+
+.myCardHeader {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#qOne {
+    display: hide;
+}
