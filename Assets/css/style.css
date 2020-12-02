@@ -11,7 +11,8 @@ body {
 
 .cardStyle {
     width: 30rem; 
-    margin: 0 auto; 
+    margin: 0 auto;
+    margin-top: 80px; 
     padding: 30px 40px;
     border-radius: 30px;
 }
@@ -21,6 +22,31 @@ body {
     font-size: larger;
 }
 
-#qOne {
-    display: hide;
+#qOne { 
+    display: none;    
+}
+
+#qTwo {
+    display: none;
+}
+
+#qThree {
+    display: none;
+}
+#qFour {
+    display: none;
+}
+
+#qFive {
+    display: none;
+}
+#qSix {
+    display: none;
+}
+
+#qSeven {
+    display: none;
+}
+#qEight {
+    display: none;
 }
