@@ -24,88 +24,91 @@
         <h1 class= "display-4"> Code Quiz!</h1>
             </div>
     </header>
-    <div class="card text-center cardStyle" id="qOne" >   
+    <div class="btn btn-primary startButton centered" type="button" style="margin: 0 auto;" id=startsQuiz>Start Here</div>
+    
+
+   <div class="card text-center cardStyle hide" id="qOne" >   
         <div class="card-header myCardHeader">
-          Featured
+          What is H1 in an html document?
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item btn">Cras justo odio</li>
+          <li class="list-group-item btn ans1">Dapibus ac facilisis in</li>
+          <li class="list-group-item btn">Vestibulum at eros</li>
+        </ul>
+    </div> 
+
+     <div class="card text-center cardStyle hide" id="qTwo" >   
+        <div class="card-header myCardHeader">
+          What does the # represent
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item btn ans2">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
           <li class="list-group-item btn">Vestibulum at eros</li>
         </ul>
     </div>
 
-     <div class="card text-center cardStyle" id="qTwo" >   
+    <div class="card text-center cardStyle hide" id="qThree" >   
         <div class="card-header myCardHeader">
-          Featured
+          What does one use to generate a random number?
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item btn">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
-          <li class="list-group-item btn">Vestibulum at eros</li>
+          <li class="list-group-item btn ans3">Vestibulum at eros</li>
         </ul>
     </div>
 
-    <div class="card text-center cardStyle" id="qThree" >   
+    <div class="card text-center cardStyle hide" id="qFour" >   
         <div class="card-header myCardHeader">
-          Featured
+          What is a jumbotron?
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item btn">Cras justo odio</li>
-          <li class="list-group-item btn">Dapibus ac facilisis in</li>
-          <li class="list-group-item btn">Vestibulum at eros</li>
-        </ul>
-    </div>
-
-    <div class="card text-center cardStyle" id="qFour" >   
-        <div class="card-header myCardHeader">
-          Featured
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item btn">Cras justo odio</li>
+          <li class="list-group-item btn ans4">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
           <li class="list-group-item btn">Vestibulum at eros</li>
         </ul>
     </div>
     
-    <div class="card text-center cardStyle" id="qFive" >   
+    <div class="card text-center cardStyle hide" id="qFive" >   
         <div class="card-header myCardHeader">
-          Featured
+          What is it called when you fix up code to make it more readable?
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item btn">Cras justo odio</li>
+          <li class="list-group-item btn ans5">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
           <li class="list-group-item btn">Vestibulum at eros</li>
         </ul>
     </div>
 
-    <div class="card text-center cardStyle" id="qSix" >   
+    <div class="card text-center cardStyle hide" id="qSix" >   
         <div class="card-header myCardHeader">
-          Featured
+          The design of elements is typically called the?
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item btn">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
-          <li class="list-group-item btn">Vestibulum at eros</li>
+          <li class="list-group-item btn ans6">Vestibulum at eros</li>
         </ul>
     </div>
-    <div class="card text-center cardStyle" id="qSeven" >   
+    <div class="card text-center cardStyle hide" id="qSeven" >   
         <div class="card-header myCardHeader">
           Featured
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item btn">Cras justo odio</li>
-          <li class="list-group-item btn">Dapibus ac facilisis in</li>
+          <li class="list-group-item btn ans7">Dapibus ac facilisis in</li>
           <li class="list-group-item btn">Vestibulum at eros</li>
         </ul>
     </div>
 
-    <div class="card text-center cardStyle" id="qEight" >   
+    <div class="card text-center cardStyle hide" id="qEight" >   
         <div class="card-header myCardHeader">
           Featured
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item btn">Cras justo odio</li>
+          <li class="list-group-item btn ans8">Cras justo odio</li>
           <li class="list-group-item btn">Dapibus ac facilisis in</li>
           <li class="list-group-item btn">Vestibulum at eros</li>
         </ul>
@@ -113,12 +116,34 @@
    
    
    <script>
-        // $(document).ready(function(){
+        $(document).ready(function(){
+        $('.startButton').click(function(){
+          var startScreen = document.getElementById("startsQuiz");
+         startScreen.setAttribute("class", "hide");
+
+         for(i =0; $('startButton').click; i++){
+           
+          var quesRoll = document.getElementById(quesArray[i]);
+        quesRoll.classList.remove('hide');
+            
+
+           };
+
+         });
+
+
+          
+
         
-        // })
+         
+          
+        
+         })
     
 
-    var correctAns= ["Jquery", "Bootstrap", "CSS", "Template Literals", "Object", "Math Random", "Components", "Element"]
+   
+
+    var quesArray= ["qOne", "qTwo", "qThree", "qFour", "qFive", "qSix", "qSeven", "qEight"] -->
 
     </script>
 

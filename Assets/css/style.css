@@ -15,13 +15,17 @@ body {
     margin-top: 80px; 
     padding: 30px 40px;
     border-radius: 30px;
+    
 }
 
 .myCardHeader {
     font-weight: bold;
     font-size: larger;
+    text-align: center;
 }
 
+
+/* 
 #qOne { 
     display: none;    
 }
@@ -49,4 +53,15 @@ body {
 }
 #qEight {
     display: none;
-}
+} */
+
+.centered {
+    position: relative; /* or absolute */
+    top: 30% ;
+    left: 47% ;
+   
+  }
+
+  .hide {
+      display: none;
+  }
