@@ -157,6 +157,7 @@ choices.forEach(choice => {
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
+    console.log(score)
 }
 
 startGame()
