@@ -20,17 +20,17 @@ When the game is done the user can enter a Username to save their highscore and 
 Screenshots of application 
 
 Home page 
-![Home Page](Assets/images/2021-01-15(1).png)
+![Home Page](./Assets/images/2021-01-15(1).png)
 Game page
-![Home Page](Assets/images/2021-01-15(2).png)
+![Home Page](./Assets/images/2021-01-15(2).png)
 Correct Answer
-![Home Page](Assets/images/2021-01-15(3).png)
+![Home Page](./Assets/images/2021-01-15(3).png)
 Wrong Answer
-![Home Page](Assets/images/2021-01-15(4).png)
+![Home Page](./Assets/images/2021-01-15(4).png)
 Game over Page
-![Home Page](Assets/images/2021-01-15(5).png)
+![Home Page](./Assets/images/2021-01-15(5).png)
 HighScores page 
-![Home Page](Assets/images/2021-01-15(7).png)
+![Home Page](./Assets/images/2021-01-15(7).png)
 
 ## Credits 
 
