@@ -13,4 +13,7 @@ module.exports = function(app) {
   app.get("/highscores", (req, res) => {
     res.render("highscores");
   });
+  app.get("/gameover", (req, res) => {
+    res.render("gameover");
+  });
 };
