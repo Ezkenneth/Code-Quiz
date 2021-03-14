@@ -1,0 +1,89 @@
+<!-- As a heading -->
+
+<div class="container text-center ">
+      <div id="game" class="card gameCard mb-3">
+        <h3 class="quesText" ><span id="new-question-text"></span></h1>
+        <div class="ansText">
+                <p class="options">A</p>
+                <!-- Assigns options with a dataset of number -->
+                <p id="answer1" data-number="1">Option</p>
+            </div>
+            <div class="ansText">
+                <p class="options">B</p>
+                <p id="answer2" data-number="2">Option 2</p>
+            </div>
+            <div class="ansText">
+                <p class="options">C</p>
+                <p id="answer3" data-number="3">Option 3</p>
+            </div>
+      </div>
+    </div>
+    <div class="scoreContainer">
+      <h2>Score : <span id="scores"> 0</span></h2>
+      <h2>Questions : <span id="quesCount"> </span></h2>
+      <h2>Time Left : <span id="timer"> </span></h2>
+
+    </div>
+<script>
+  $(document).ready(() => {
+startMinutes = 2;
+let time = startMinutes *60
+
+startGame = () => {
+let currentQues = {};
+let acceptingAnswers = true;
+let score = 0;
+let quesCount = 0;
+let quesObject = [];
+
+
+const quesLimit = 6;
+
+  // Display questions and answers 
+  
+     $.get("/api/questions").then(data => {
+        const quesObject = [...data]
+        if(quesObject.length === 0 || quesCount > quesLimit) {
+           localStorage.setItem("mostRecentScore", score);
+           return window.location.replace("/gameover");
+        }
+        quesCount++;
+        $("#quesCount").text(quesCount)
+        const quesIndex = Math.floor(Math.random() * quesObject.length);
+        currentQues = quesObject[quesIndex];
+        $("#new-question-text").text(currentQues.question_text);
+        $("#answer1").text(currentQues.answer1);
+        $("#answer2").text(currentQues.answer2);
+        $("#answer3").text(currentQues.answer3);
+
+        quesObject.splice(quesIndex,1);
+      })
+
+      const countdownTimer = document.getElementById("timer");
+
+      setInterval(updateTimer, 1000);
+
+      function updateTimer() {
+        if (time <= 0 ) {
+          localStorage.setItem("mostRecentScore", score);
+           return window.location.replace("/gameover");
+        }
+        const minutes = Math.floor(time /60);
+        let seconds = time % 60;
+
+         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  countdownTimer.innerHTML = `${minutes}: ${seconds}`;
+  time--;
+      }
+
+
+  
+  
+}
+     startGame();
+  });
+  
+</script>
+  
+      

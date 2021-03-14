@@ -1,0 +1,3 @@
+INSERT INTO questions (question_text, answer1, answer2, answer3, correct)
+VALUES ( "What is H1 in an html document?","value","element","object",2), ("#", "What does the # represent?","class","object","id",3), ("Random", "What does one use to generate a random number?","number.random","math.random","math.guess",2), ("Jumbo", "What is a jumbotron?","bootstrap-component","boottraps","element",1), ("Fixing", "What is it called when you fix up code to make it more readable?","debugging","reconfiguring","refactoring",3), ("Elements", "The design of elements is typically called the?","style","script","preface",1);
+
